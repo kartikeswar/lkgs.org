@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutzerklärung — LKGS Circle</title>
+  <title>Datenschutzerklärung — LKGS Support Resource</title>
   <meta name="robots" content="noindex">
   <style>
     @font-face {
@@ -87,6 +87,8 @@
     .footer { padding: var(--space-10) 0 var(--space-12); }
     .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: var(--space-5); align-items: end; border-top: 1px solid var(--color-divider); padding-top: var(--space-6); }
     .footer-links { display: flex; flex-wrap: wrap; gap: var(--space-4); font-size: var(--text-sm); color: var(--color-text-muted); }
+    .brand-logo { width: 3rem; height: 3rem; border-radius: var(--radius-lg); object-fit: contain; flex-shrink: 0; }
+    [data-theme="dark"] .brand-logo { filter: brightness(0.82) contrast(1.08) saturate(1.1); }
     @media (max-width: 920px) { .footer-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -94,13 +96,9 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="/" aria-label="LKGS Circle home">
-        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="https://www.w3.org/2000/svg" role="img" aria-label="LKGS Circle logo">
-          <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/>
-          <path d="M21 33c4-8 8-12 11-12 4 0 6 5 10 11 3 5 6 8 11 9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-          <path d="M25 40c3 3 6 4 8 4 3 0 5-1 9-5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        </svg>
-        <span class="brand-text">LKGS Circle<small>Stories, guidance, and belonging</small></span>
+      <a class="brand" href="/" aria-label="LKGS Support Resource home">
+        <img class="brand-logo" src="/images/logo.png" alt="LKGS — Smile with Cleft logo">
+        <span class="brand-text">LKGS Support Resource<small>Smile with Cleft — open to every family</small></span>
       </a>
       <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -225,8 +223,8 @@
     <div class="container footer-grid">
       <div>
         <a class="brand" href="/" style="margin-bottom: var(--space-3)">
-          <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/><path d="M21 33c4-8 8-12 11-12 4 0 6 5 10 11 3 5 6 8 11 9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M25 40c3 3 6 4 8 4 3 0 5-1 9-5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
-          <span class="brand-text">LKGS Circle<small>A hopeful editorial home for families</small></span>
+          <img class="brand-logo" src="/images/logo.png" alt="LKGS — Smile with Cleft logo" aria-hidden="true">
+          <span class="brand-text">LKGS Support Resource<small>Smile with Cleft — open to every family</small></span>
         </a>
       </div>
       <div>

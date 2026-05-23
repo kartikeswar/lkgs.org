@@ -5,10 +5,10 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';">
   <!-- When wiring up the contact form, update form-action and connect-src above -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LKGS Circle — Support for Cleft Lip & Palate Families</title>
-  <meta name="description" content="A warm, supportive blog and resource website for parents of children with cleft lip and palate (LKGS), with stories, guidance, and links to trusted support." />
-  <meta property="og:title" content="LKGS Circle — Support for Cleft Lip & Palate Families" />
-  <meta property="og:description" content="Stories, guidance, and support for parents navigating cleft lip and palate journeys." />
+  <title>LKGS Support Resource — Cleft Lip &amp; Palate Support for Every Family</title>
+  <meta name="description" content="An open, inclusive support resource for families of children with cleft lip and palate (LKGS / Lippen-Kiefer-Gaumenspalte). Stories, guidance, and trusted links for parents everywhere." />
+  <meta property="og:title" content="LKGS Support Resource — Cleft Lip &amp; Palate Support for Every Family" />
+  <meta property="og:description" content="Inclusive support, honest stories, and trusted resources for families navigating cleft lip and palate journeys worldwide." />
   <meta property="og:type" content="website" />
   <style>
     /* Self-hosted fonts — no external CDN; no IP transmitted to third parties */
@@ -158,19 +158,17 @@
     .cookie-actions { display: flex; gap: var(--space-3); align-items: center; flex-shrink: 0; }
     .cookie-actions a { font-size: var(--text-sm); color: var(--color-primary); font-weight: 700; text-decoration: underline; }
     .cookie-notice[hidden] { display: none; }
+    .brand-logo { width: 3rem; height: 3rem; border-radius: var(--radius-lg); object-fit: contain; flex-shrink: 0; }
+    [data-theme="dark"] .brand-logo { filter: brightness(0.82) contrast(1.08) saturate(1.1); }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="LKGS Circle home">
-        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="https://www.w3.org/2000/svg" role="img" aria-label="LKGS Circle logo">
-          <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/>
-          <path d="M21 33c4-8 8-12 11-12 4 0 6 5 10 11 3 5 6 8 11 9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-          <path d="M25 40c3 3 6 4 8 4 3 0 5-1 9-5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        </svg>
-        <span class="brand-text">LKGS Circle<small>Stories, guidance, and belonging</small></span>
+      <a class="brand" href="#top" aria-label="LKGS Support Resource home">
+        <img class="brand-logo" src="/images/logo.png" alt="LKGS — Smile with Cleft logo: a baby nestled in flowers">
+        <span class="brand-text">LKGS Support Resource<small>Smile with Cleft — open to every family</small></span>
       </a>
       <nav aria-label="Primary navigation">
         <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
@@ -182,7 +180,7 @@
           <a href="#resources">Resources</a>
           <a href="#support">Support</a>
           <a href="#contact">Contact</a>
-          <a class="btn btn-primary hidden-mobile" href="#support">Join the circle</a>
+          <a class="btn btn-primary hidden-mobile" href="#support">Find support</a>
         </div>
       </nav>
       <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
@@ -195,24 +193,24 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">For parents and families</span>
-          <h1>A gentle home for LKGS parents who need clarity, courage, and community.</h1>
-          <p>This website is designed as a warm, trustworthy blog for families navigating cleft lip and palate, also called Lippen-Kiefer-Gaumenspalte (LKGS). It gives space for honest stories, practical help, and links to trusted organizations including Deutsche Cleft Kinderhilfe e.V.</p>
+          <span class="eyebrow">For every family, everywhere</span>
+          <h1>A warm, open resource for families living with cleft lip and palate.</h1>
+          <p>LKGS Support Resource is an inclusive home for parents, caregivers, and families of children with cleft lip and palate — known in German as Lippen-Kiefer-Gaumenspalte (LKGS). Whatever your background, language, or family shape, you are welcome here. Find honest stories, practical guidance, and links to trusted support including Deutsche Cleft Kinderhilfe e.V.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#stories">Read parent stories</a>
+            <a class="btn btn-primary" href="#stories">Read family stories</a>
             <a class="btn btn-secondary" href="#resources">Browse resources</a>
           </div>
           <div class="cta-row" style="margin-top: var(--space-4)">
-            <span class="tag">Built to grow into a full blog</span>
-            <span class="tag">English-first, globally relevant</span>
+            <span class="tag">Inclusive &amp; stigma-free</span>
+            <span class="tag">English &amp; German — globally relevant</span>
           </div>
         </div>
         <aside class="hero-card" aria-label="Website highlights">
-          <span class="eyebrow">What this site can do</span>
+          <span class="eyebrow">What you will find here</span>
           <div class="stat-list">
-            <div class="stat"><span class="dot"></span><div><strong>Support families emotionally.</strong><p>Use calm language, relatable articles, and hopeful stories that reduce isolation.</p></div></div>
-            <div class="stat"><span class="dot"></span><div><strong>Share practical guidance.</strong><p>Add feeding advice, surgery preparation notes, speech therapy journeys, and hospital checklists.</p></div></div>
-            <div class="stat"><span class="dot"></span><div><strong>Direct people to trusted help.</strong><p>Feature nonprofit links, parent communities, and donation pathways without overwhelming visitors.</p></div></div>
+            <div class="stat"><span class="dot"></span><div><strong>Emotional support for every caregiver.</strong><p>Calm, respectful language and real stories that help all families — regardless of background — feel less alone.</p></div></div>
+            <div class="stat"><span class="dot"></span><div><strong>Practical, accessible guidance.</strong><p>Feeding advice, surgery preparation, speech therapy insights, and checklists that work for families worldwide.</p></div></div>
+            <div class="stat"><span class="dot"></span><div><strong>Trusted, vetted resources.</strong><p>Links to reputable nonprofits, international support organisations, and communities — no overwhelm, no barriers.</p></div></div>
           </div>
         </aside>
       </div>
@@ -222,18 +220,18 @@
       <div class="container cards">
         <div class="card">
           <span class="eyebrow">Mission</span>
-          <h3>Parents deserve support that feels human.</h3>
-          <p>The first weeks after diagnosis or birth can feel heavy. This site is structured to meet parents with calm words, clear next steps, and a sense that they are not facing this alone.</p>
+          <h3>Every family deserves support that feels human.</h3>
+          <p>The first weeks after diagnosis or birth can feel overwhelming. This resource meets every caregiver — single parents, same-sex parents, families of all cultures — with calm words, clear next steps, and the reassurance that they are not alone.</p>
         </div>
         <div class="card">
-          <span class="eyebrow">Voice</span>
-          <h3>Warm, practical, and stigma-free.</h3>
-          <p>The writing style avoids medical coldness and avoids outdated, hurtful terms. It respects both the child and the family while still sharing helpful details.</p>
+          <span class="eyebrow">Values</span>
+          <h3>Inclusive, stigma-free, and respectful.</h3>
+          <p>We use person-first language, welcome all family structures, and actively avoid outdated or hurtful terms. Every child and every caregiver is treated with equal dignity here.</p>
         </div>
         <div class="card">
-          <span class="eyebrow">Growth</span>
-          <h3>Ready for articles, interviews, and guides.</h3>
-          <p>You can keep this as a static launch page now, then later connect it to WordPress, Ghost, or a headless CMS to publish regularly.</p>
+          <span class="eyebrow">Growing together</span>
+          <h3>A resource that expands with your needs.</h3>
+          <p>Starting as a curated guide, this site will grow into a full multilingual resource — with articles, interviews, and stories from families across Germany and around the world.</p>
         </div>
       </div>
     </section>
@@ -307,8 +305,8 @@
       <div class="container support-layout">
         <div class="donate-card">
           <span class="eyebrow">Community support</span>
-          <h2>Invite parents into the circle.</h2>
-          <p>Use this area for a newsletter, a private support group waitlist, or a simple “write to us” invitation. Early websites do not need complexity; they need trust and a clear next step.</p>
+          <h2>You are welcome here — whoever you are.</h2>
+          <p>This space is open to all caregivers: mothers, fathers, grandparents, foster families, same-sex parents, and single parents. Use the contact form to share your story, ask a question, or simply reach out. You do not have to navigate this alone.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="https://www.spaltkinder.org" target="_blank" rel="noopener noreferrer">Support Deutsche Cleft Kinderhilfe</a>
           </div>
@@ -319,9 +317,9 @@
           </div>
         </div>
         <div class="form-card" id="contact">
-          <span class="eyebrow">Contact block</span>
-          <h3>Simple contact section for launch</h3>
-          <p>Connect this form later to Formspree, Basin, or your own backend. For now, it works as a polished placeholder for launch and investor or partner demos.</p>
+          <span class="eyebrow">Get in touch</span>
+          <h3>Share your story or ask a question</h3>
+          <p>Whether you have just received a diagnosis, are preparing for surgery, or want to share your family's experience — we would love to hear from you.</p>
           <form class="form-row">
             <label>Full name<input type="text" placeholder="Your name" aria-label="Full name"></label>
             <label>Email address<input type="email" placeholder="name@example.com" aria-label="Email address"></label>
@@ -338,10 +336,10 @@
     <div class="container footer-grid">
       <div>
         <div class="brand" style="margin-bottom: var(--space-3)">
-          <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="https://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/><path d="M21 33c4-8 8-12 11-12 4 0 6 5 10 11 3 5 6 8 11 9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M25 40c3 3 6 4 8 4 3 0 5-1 9-5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
-          <span class="brand-text">LKGS Circle<small>A hopeful editorial home for families</small></span>
+          <img class="brand-logo" src="/images/logo.png" alt="LKGS — Smile with Cleft logo" aria-hidden="true">
+          <span class="brand-text">LKGS Support Resource<small>Smile with Cleft — open to every family</small></span>
         </div>
-        <p>This launch version is built as a clean, editable static site that can be published quickly and expanded over time.</p>
+        <p>An open, inclusive resource for families of children with cleft lip and palate, wherever you are in the world.</p>
       </div>
       <div>
         <div class="footer-links">
