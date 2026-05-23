@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LKGS Circle — Support for Cleft Lip & Palate Families</title>
+  <meta name="description" content="A warm, supportive blog and resource website for parents of children with cleft lip and palate (LKGS), with stories, guidance, and links to trusted support." />
+  <meta property="og:title" content="LKGS Circle — Support for Cleft Lip & Palate Families" />
+  <meta property="og:description" content="Stories, guidance, and support for parents navigating cleft lip and palate journeys." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+      --color-bg: #f7f5f1; --color-surface: #fdfbf7; --color-surface-2: #ffffff; --color-surface-offset: #efe8e0; --color-border: #ddd4cb; --color-divider: #e6ddd4;
+      --color-text: #2b241d; --color-text-muted: #6d655d; --color-text-faint: #a49a90; --color-text-inverse: #fffaf4;
+      --color-primary: #0d6b67; --color-primary-hover: #095450; --color-primary-highlight: #d7ece8; --color-gold: #bf8b2d; --color-rose: #a76067;
+      --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.875rem; --radius-xl: 1.25rem; --radius-full: 9999px;
+      --shadow-sm: 0 1px 2px rgba(33, 26, 19, 0.06); --shadow-md: 0 8px 24px rgba(33, 26, 19, 0.08); --shadow-lg: 0 18px 40px rgba(33, 26, 19, 0.12);
+      --font-display: 'Source Serif 4', Georgia, serif; --font-body: 'Satoshi', Inter, sans-serif;
+      --content-default: 1120px; --content-narrow: 720px;
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #171513; --color-surface: #1f1c19; --color-surface-2: #26221f; --color-surface-offset: #2c2723; --color-border: #3b3530; --color-divider: #322d29;
+      --color-text: #ece4dc; --color-text-muted: #b8aea4; --color-text-faint: #82786f; --color-text-inverse: #181513;
+      --color-primary: #5fb0aa; --color-primary-hover: #81c3be; --color-primary-highlight: #223634; --color-gold: #d3a64e; --color-rose: #cd8b91;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.22); --shadow-md: 0 10px 28px rgba(0,0,0,.28); --shadow-lg: 0 20px 44px rgba(0,0,0,.36);
+    }
+    * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: none; text-size-adjust: none; }
+    body { min-height: 100dvh; font-family: var(--font-body); font-size: var(--text-base); line-height: 1.65; color: var(--color-text); background: var(--color-bg); }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+    .skip-link { position: absolute; left: var(--space-4); top: -3rem; background: var(--color-primary); color: var(--color-text-inverse); padding: var(--space-3) var(--space-4); border-radius: var(--radius-full); z-index: 100; }
+    .skip-link:focus { top: var(--space-4); }
+    .container { width: min(calc(100% - 2rem), var(--content-default)); margin-inline: auto; }
+    .narrow { width: min(calc(100% - 2rem), var(--content-narrow)); margin-inline: auto; }
+    .eyebrow { font-size: var(--text-xs); letter-spacing: .12em; text-transform: uppercase; color: var(--color-primary); font-weight: 700; }
+    .section { padding: clamp(var(--space-12), 8vw, var(--space-24)) 0; }
+    .header { position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, var(--color-bg) 82%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); min-height: 4.5rem; }
+    .brand { display: inline-flex; align-items: center; gap: var(--space-3); font-weight: 700; }
+    .brand-mark { width: 2.25rem; height: 2.25rem; color: var(--color-primary); }
+    .brand-text small { display: block; font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 500; }
+    .nav-links { display: flex; gap: var(--space-5); align-items: center; font-size: var(--text-sm); }
+    .theme-toggle, .menu-toggle { min-width: 44px; min-height: 44px; display: inline-grid; place-items: center; border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent); border-radius: var(--radius-full); background: var(--color-surface); }
+    .menu-toggle { display: none; }
+    .hero { padding: clamp(var(--space-16), 12vw, 8rem) 0 var(--space-12); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(var(--space-8), 5vw, var(--space-16)); align-items: center; }
+    h1, h2 { font-family: var(--font-display); line-height: 1.06; font-weight: 700; }
+    h1 { font-size: var(--text-2xl); max-width: 12ch; }
+    h2 { font-size: var(--text-xl); margin-bottom: var(--space-4); }
+    h3 { font-size: var(--text-lg); line-height: 1.2; margin-bottom: var(--space-3); }
+    p { max-width: 68ch; color: var(--color-text-muted); }
+    .hero-copy p { margin-top: var(--space-5); font-size: 1.04em; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-6); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: .85rem 1.2rem; border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 700; transition: all var(--transition-interactive); }
+    .btn-primary { background: var(--color-primary); color: var(--color-text-inverse); }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .btn-secondary { border: 1px solid color-mix(in srgb, var(--color-text) 14%, transparent); background: var(--color-surface); }
+    .hero-card { background: linear-gradient(180deg, color-mix(in srgb, var(--color-primary-highlight) 74%, var(--color-surface-2)), var(--color-surface)); border: 1px solid color-mix(in srgb, var(--color-primary) 14%, transparent); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); padding: var(--space-8); position: relative; overflow: hidden; }
+    .hero-card::after { content: ''; position: absolute; inset: auto -2rem -2rem auto; width: 9rem; height: 9rem; border-radius: 50%; background: color-mix(in srgb, var(--color-gold) 20%, transparent); filter: blur(12px); }
+    .stat-list { display: grid; gap: var(--space-4); margin-top: var(--space-6); }
+    .stat { display: grid; grid-template-columns: auto 1fr; gap: var(--space-3); align-items: start; }
+    .dot { width: .75rem; height: .75rem; border-radius: 50%; margin-top: .45rem; background: var(--color-primary); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+    .card { background: var(--color-surface); border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-sm); }
+    .card p { font-size: .98em; }
+    .feature-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: var(--space-5); }
+    .feature-panel { background: var(--color-surface); border-radius: var(--radius-xl); border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); padding: var(--space-6); }
+    .blog-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: var(--space-5); align-items: start; }
+    .post-list { display: grid; gap: var(--space-5); }
+    article.post { background: var(--color-surface); border-radius: var(--radius-xl); border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); padding: var(--space-6); }
+    .meta { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-3); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: .08em; }
+    .post a.read-more { color: var(--color-primary); font-weight: 700; display: inline-block; margin-top: var(--space-4); }
+    .quote { padding: var(--space-8); background: var(--color-surface-offset); border-radius: var(--radius-xl); }
+    .quote p { font-family: var(--font-display); color: var(--color-text); font-size: clamp(1.25rem, 1.1rem + 1vw, 1.8rem); line-height: 1.3; }
+    .resources { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+    .resource { padding: var(--space-5); border-radius: var(--radius-lg); background: var(--color-surface); border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); min-height: 100%; }
+    .resource a { color: var(--color-primary); font-weight: 700; }
+    .support-band { background: var(--color-surface-offset); border-block: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent); }
+    .support-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+    .form-card, .donate-card { background: var(--color-surface); padding: var(--space-6); border-radius: var(--radius-xl); border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); }
+    .form-row { display: grid; gap: var(--space-4); margin-top: var(--space-5); }
+    label { display: grid; gap: var(--space-2); font-size: var(--text-sm); font-weight: 700; color: var(--color-text); }
+    input, textarea { width: 100%; border-radius: var(--radius-md); border: 1px solid var(--color-border); background: var(--color-surface-2); color: var(--color-text); padding: .9rem 1rem; }
+    textarea { min-height: 9rem; resize: vertical; }
+    .footer { padding: var(--space-10) 0 var(--space-12); }
+    .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: var(--space-5); align-items: end; border-top: 1px solid var(--color-divider); padding-top: var(--space-6); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: var(--space-4); font-size: var(--text-sm); color: var(--color-text-muted); }
+    .tag { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-xs); background: var(--color-primary-highlight); color: var(--color-primary); border-radius: var(--radius-full); padding: .5rem .8rem; font-weight: 700; }
+    .hidden-mobile { display: inline-flex; }
+    @media (max-width: 920px) {
+      .hero-grid, .cards, .feature-grid, .blog-grid, .support-layout, .resources, .footer-grid { grid-template-columns: 1fr; }
+      .nav-links { position: absolute; top: calc(100% + .5rem); right: 1rem; left: 1rem; flex-direction: column; align-items: flex-start; padding: var(--space-5); background: var(--color-surface); border-radius: var(--radius-xl); border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); box-shadow: var(--shadow-md); display: none; }
+      .nav-links.open { display: flex; }
+      .menu-toggle { display: inline-grid; }
+      .hidden-mobile { display: none; }
+      h1 { max-width: 14ch; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="LKGS Circle home">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LKGS Circle logo">
+          <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/>
+          <path d="M21 33c4-8 8-12 11-12 4 0 6 5 10 11 3 5 6 8 11 9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <path d="M25 40c3 3 6 4 8 4 3 0 5-1 9-5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text">LKGS Circle<small>Stories, guidance, and belonging</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#about">About</a>
+          <a href="#stories">Stories</a>
+          <a href="#resources">Resources</a>
+          <a href="#support">Support</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn-primary hidden-mobile" href="#support">Join the circle</a>
+        </div>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">For parents and families</span>
+          <h1>A gentle home for LKGS parents who need clarity, courage, and community.</h1>
+          <p>This website is designed as a warm, trustworthy blog for families navigating cleft lip and palate, also called Lippen-Kiefer-Gaumenspalte (LKGS). It gives space for honest stories, practical help, and links to trusted organizations including Deutsche Cleft Kinderhilfe e.V.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#stories">Read parent stories</a>
+            <a class="btn btn-secondary" href="#resources">Browse resources</a>
+          </div>
+          <div class="cta-row" style="margin-top: var(--space-4)">
+            <span class="tag">Built to grow into a full blog</span>
+            <span class="tag">English-first, globally relevant</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Website highlights">
+          <span class="eyebrow">What this site can do</span>
+          <div class="stat-list">
+            <div class="stat"><span class="dot"></span><div><strong>Support families emotionally.</strong><p>Use calm language, relatable articles, and hopeful stories that reduce isolation.</p></div></div>
+            <div class="stat"><span class="dot"></span><div><strong>Share practical guidance.</strong><p>Add feeding advice, surgery preparation notes, speech therapy journeys, and hospital checklists.</p></div></div>
+            <div class="stat"><span class="dot"></span><div><strong>Direct people to trusted help.</strong><p>Feature nonprofit links, parent communities, and donation pathways without overwhelming visitors.</p></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container cards">
+        <div class="card">
+          <span class="eyebrow">Mission</span>
+          <h3>Parents deserve support that feels human.</h3>
+          <p>The first weeks after diagnosis or birth can feel heavy. This site is structured to meet parents with calm words, clear next steps, and a sense that they are not facing this alone.</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Voice</span>
+          <h3>Warm, practical, and stigma-free.</h3>
+          <p>The writing style avoids medical coldness and avoids outdated, hurtful terms. It respects both the child and the family while still sharing helpful details.</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Growth</span>
+          <h3>Ready for articles, interviews, and guides.</h3>
+          <p>You can keep this as a static launch page now, then later connect it to WordPress, Ghost, or a headless CMS to publish regularly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stories">
+      <div class="container feature-grid">
+        <div class="feature-panel">
+          <span class="eyebrow">Featured story</span>
+          <h2>What parents often need most is not another brochure, but another parent saying: “You will get through this.”</h2>
+          <p>This featured section is meant for your own family story or a guest post from another parent. It can explain the diagnosis journey, surgery fears, feeding struggles, or the quiet moments of strength that helped your family keep moving forward.</p>
+          <div class="cta-row"><a class="btn btn-secondary" href="#contact">Publish your first story</a></div>
+        </div>
+        <div class="quote">
+          <p>“Strength grows when fear finally meets understanding.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container blog-grid">
+        <div class="post-list">
+          <article class="post">
+            <div class="meta"><span>Sample article</span><span>Feeding</span><span>6 min read</span></div>
+            <h3>How to prepare emotionally and practically for the first feeding challenges</h3>
+            <p>This starter article can combine emotional reassurance with practical suggestions, such as questions to ask your cleft team, what products helped, and how to make home routines less stressful.</p>
+            <a class="read-more" href="#contact">Use this as your first blog template</a>
+          </article>
+          <article class="post">
+            <div class="meta"><span>Sample article</span><span>Surgery</span><span>8 min read</span></div>
+            <h3>What to pack for surgery day when your mind is already full</h3>
+            <p>Create a highly shareable checklist article here: medical papers, feeding tools, comforting items, clothes, snacks, and the small details parents usually remember too late.</p>
+            <a class="read-more" href="#contact">Turn this into a checklist post</a>
+          </article>
+          <article class="post">
+            <div class="meta"><span>Sample article</span><span>Parent support</span><span>5 min read</span></div>
+            <h3>Talking to friends and relatives about LKGS without feeling exhausted</h3>
+            <p>This post can help parents explain the condition, set emotional boundaries, and answer repetitive questions with confidence and grace.</p>
+            <a class="read-more" href="#contact">Draft this article next</a>
+          </article>
+        </div>
+        <aside class="feature-panel">
+          <span class="eyebrow">Editorial plan</span>
+          <h3>Suggested categories</h3>
+          <p>Launch with 5 practical categories so visitors always know where to go first.</p>
+          <div class="post-list" style="margin-top: var(--space-5)">
+            <div class="resource"><strong>Diagnosis & emotions</strong><p>First reactions, talking with doctors, accepting uncertainty.</p></div>
+            <div class="resource"><strong>Feeding & early care</strong><p>Bottles, routines, stress management, practical hacks.</p></div>
+            <div class="resource"><strong>Surgery journey</strong><p>Preparation, hospital day, recovery, parental wellbeing.</p></div>
+            <div class="resource"><strong>Speech & development</strong><p>Therapy, milestones, school confidence, social questions.</p></div>
+            <div class="resource"><strong>Stories & hope</strong><p>Personal reflections, interviews, and positive long-term perspectives.</p></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="container">
+        <span class="eyebrow">Trusted resources</span>
+        <h2>Start with a small set of credible links.</h2>
+        <p class="narrow" style="margin: 0 0 var(--space-6) 0;">These are good examples of external resources to include early, while keeping your own voice central and supportive.</p>
+        <div class="resources">
+          <div class="resource"><h3>Deutsche Cleft Kinderhilfe e.V.</h3><p>Add this as a key nonprofit link and donation pathway on your site.</p><a href="https://www.spaltkinder.org" target="_blank" rel="noopener noreferrer">Visit organization</a></div>
+          <div class="resource"><h3>ACPA</h3><p>A major source of patient and family support information for cleft and craniofacial care.</p><a href="https://acpacares.org" target="_blank" rel="noopener noreferrer">Explore family resources</a></div>
+          <div class="resource"><h3>CHOP resource list</h3><p>Helpful hub that links families to multiple support organizations and guides.</p><a href="https://www.chop.edu/conditions-diseases/cleft-lip-and-palate/resources" target="_blank" rel="noopener noreferrer">Open resource page</a></div>
+          <div class="resource"><h3>CLAPA</h3><p>A long-standing UK charity with useful guidance and community materials.</p><a href="https://www.clapa.com/treatment/other-resources/" target="_blank" rel="noopener noreferrer">See resources</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section support-band" id="support">
+      <div class="container support-layout">
+        <div class="donate-card">
+          <span class="eyebrow">Community support</span>
+          <h2>Invite parents into the circle.</h2>
+          <p>Use this area for a newsletter, a private support group waitlist, or a simple “write to us” invitation. Early websites do not need complexity; they need trust and a clear next step.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.spaltkinder.org" target="_blank" rel="noopener noreferrer">Support Deutsche Cleft Kinderhilfe</a>
+          </div>
+          <div class="post-list" style="margin-top: var(--space-5)">
+            <div class="resource"><strong>Optional next feature:</strong><p>Parent stories submission form.</p></div>
+            <div class="resource"><strong>Optional next feature:</strong><p>Country-wise hospital and specialist directory.</p></div>
+            <div class="resource"><strong>Optional next feature:</strong><p>Multilingual article versions, starting with German and English.</p></div>
+          </div>
+        </div>
+        <div class="form-card" id="contact">
+          <span class="eyebrow">Contact block</span>
+          <h3>Simple contact section for launch</h3>
+          <p>Connect this form later to Formspree, Basin, or your own backend. For now, it works as a polished placeholder for launch and investor or partner demos.</p>
+          <form class="form-row">
+            <label>Full name<input type="text" placeholder="Your name" aria-label="Full name"></label>
+            <label>Email address<input type="email" placeholder="name@example.com" aria-label="Email address"></label>
+            <label>Your message<textarea placeholder="Share your story, a question, or how you would like to help."></textarea></label>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom: var(--space-3)">
+          <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/><path d="M21 33c4-8 8-12 11-12 4 0 6 5 10 11 3 5 6 8 11 9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M25 40c3 3 6 4 8 4 3 0 5-1 9-5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+          <span class="brand-text">LKGS Circle<small>A hopeful editorial home for families</small></span>
+        </div>
+        <p>This launch version is built as a clean, editable static site that can be published quickly and expanded over time.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#stories">Stories</a>
+        <a href="#resources">Resources</a>
+        <a href="#support">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const themeBtn = document.querySelector('[data-theme-toggle]');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      let theme = prefersDark ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+      const setIcon = () => {
+        themeBtn.innerHTML = theme === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      };
+      setIcon();
+      themeBtn.addEventListener('click', function () { theme = theme === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', theme); setIcon(); });
+
+      const menuBtn = document.querySelector('.menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+      menuBtn.addEventListener('click', function () {
+        const open = navLinks.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', String(open));
+      });
+      navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }));
+    }());
+  </script>
+</body>
+</html>
