@@ -59,7 +59,7 @@ All content on this site must be welcoming to every family, without exception.
 - Do not add third-party scripts, analytics, or font CDNs without updating the Content Security Policy and Datenschutzerklärung.
 - All fonts must remain self-hosted under `fonts/`.
 - The `impressum.html` and `datenschutz.html` pages must remain reachable from every page footer.
-- When wiring up the contact form, update `form-action` and `connect-src` in the CSP meta tag on all three HTML pages, and update section 3.3 of `datenschutz.html`.
+- The contact form has been removed. If a form is added in future, update `form-action` and `connect-src` in the CSP meta tag on all three HTML pages, and update section 3.3 of `datenschutz.html`.
 
 ## Technical Notes
 

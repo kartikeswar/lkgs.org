@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';">
-  <!-- When wiring up the contact form, update form-action and connect-src above -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LKGS Support Resource — Cleft Lip &amp; Palate Support for Every Family</title>
   <meta name="description" content="An open, inclusive support resource for families of children with cleft lip and palate (LKGS / Lippen-Kiefer-Gaumenspalte). Stories, guidance, and trusted links for parents everywhere." />
@@ -129,12 +128,7 @@
     .resource { padding: var(--space-5); border-radius: var(--radius-lg); background: var(--color-surface); border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); min-height: 100%; }
     .resource a { color: var(--color-primary); font-weight: 700; }
     .support-band { background: var(--color-surface-offset); border-block: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent); }
-    .support-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
-    .form-card, .donate-card { background: var(--color-surface); padding: var(--space-6); border-radius: var(--radius-xl); border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); }
-    .form-row { display: grid; gap: var(--space-4); margin-top: var(--space-5); }
-    label { display: grid; gap: var(--space-2); font-size: var(--text-sm); font-weight: 700; color: var(--color-text); }
-    input, textarea { width: 100%; border-radius: var(--radius-md); border: 1px solid var(--color-border); background: var(--color-surface-2); color: var(--color-text); padding: .9rem 1rem; }
-    textarea { min-height: 9rem; resize: vertical; }
+    .donate-card { background: var(--color-surface); padding: var(--space-6); border-radius: var(--radius-xl); border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); max-width: var(--content-narrow); }
     .footer { padding: var(--space-10) 0 var(--space-12); }
     .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: var(--space-5); align-items: end; border-top: 1px solid var(--color-divider); padding-top: var(--space-6); }
     .footer-links { display: flex; flex-wrap: wrap; gap: var(--space-4); font-size: var(--text-sm); color: var(--color-text-muted); }
@@ -179,7 +173,6 @@
           <a href="#stories">Stories</a>
           <a href="#resources">Resources</a>
           <a href="#support">Support</a>
-          <a href="#contact">Contact</a>
           <a class="btn btn-primary hidden-mobile" href="#support">Find support</a>
         </div>
       </nav>
@@ -242,7 +235,7 @@
           <span class="eyebrow">Featured story</span>
           <h2>What parents often need most is not another brochure, but another parent saying: “You will get through this.”</h2>
           <p>This featured section is meant for your own family story or a guest post from another parent. It can explain the diagnosis journey, surgery fears, feeding struggles, or the quiet moments of strength that helped your family keep moving forward.</p>
-          <div class="cta-row"><a class="btn btn-secondary" href="#contact">Publish your first story</a></div>
+          <div class="cta-row"><a class="btn btn-secondary" href="#support">Publish your first story</a></div>
         </div>
         <div class="quote">
           <p>“Strength grows when fear finally meets understanding.”</p>
@@ -257,19 +250,19 @@
             <div class="meta"><span>Sample article</span><span>Feeding</span><span>6 min read</span></div>
             <h3>How to prepare emotionally and practically for the first feeding challenges</h3>
             <p>This starter article can combine emotional reassurance with practical suggestions, such as questions to ask your cleft team, what products helped, and how to make home routines less stressful.</p>
-            <a class="read-more" href="#contact">Use this as your first blog template</a>
+            <a class="read-more" href="#support">Use this as your first blog template</a>
           </article>
           <article class="post">
             <div class="meta"><span>Sample article</span><span>Surgery</span><span>8 min read</span></div>
             <h3>What to pack for surgery day when your mind is already full</h3>
             <p>Create a highly shareable checklist article here: medical papers, feeding tools, comforting items, clothes, snacks, and the small details parents usually remember too late.</p>
-            <a class="read-more" href="#contact">Turn this into a checklist post</a>
+            <a class="read-more" href="#support">Turn this into a checklist post</a>
           </article>
           <article class="post">
             <div class="meta"><span>Sample article</span><span>Parent support</span><span>5 min read</span></div>
             <h3>Talking to friends and relatives about LKGS without feeling exhausted</h3>
             <p>This post can help parents explain the condition, set emotional boundaries, and answer repetitive questions with confidence and grace.</p>
-            <a class="read-more" href="#contact">Draft this article next</a>
+            <a class="read-more" href="#support">Draft this article next</a>
           </article>
         </div>
         <aside class="feature-panel">
@@ -302,11 +295,11 @@
     </section>
 
     <section class="section support-band" id="support">
-      <div class="container support-layout">
+      <div class="container">
         <div class="donate-card">
           <span class="eyebrow">Community support</span>
           <h2>You are welcome here — whoever you are.</h2>
-          <p>This space is open to all caregivers: mothers, fathers, grandparents, foster families, same-sex parents, and single parents. Use the contact form to share your story, ask a question, or simply reach out. You do not have to navigate this alone.</p>
+          <p>This space is open to all caregivers: mothers, fathers, grandparents, foster families, same-sex parents, and single parents. Reach out to the organisations below, share your story, or simply know that you are not facing this alone.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="https://www.spaltkinder.org" target="_blank" rel="noopener noreferrer">Support Deutsche Cleft Kinderhilfe</a>
           </div>
@@ -315,18 +308,6 @@
             <div class="resource"><strong>Optional next feature:</strong><p>Country-wise hospital and specialist directory.</p></div>
             <div class="resource"><strong>Optional next feature:</strong><p>Multilingual article versions, starting with German and English.</p></div>
           </div>
-        </div>
-        <div class="form-card" id="contact">
-          <span class="eyebrow">Get in touch</span>
-          <h3>Share your story or ask a question</h3>
-          <p>Whether you have just received a diagnosis, are preparing for surgery, or want to share your family's experience — we would love to hear from you.</p>
-          <form class="form-row">
-            <label>Full name<input type="text" placeholder="Your name" aria-label="Full name"></label>
-            <label>Email address<input type="email" placeholder="name@example.com" aria-label="Email address"></label>
-            <label>Your message<textarea placeholder="Share your story, a question, or how you would like to help."></textarea></label>
-            <p style="font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-1)">This form is currently inactive — no data is transmitted. When activated, your name and email will be used only to respond and will not be shared with third parties. See our <a href="/datenschutz.html" style="color:var(--color-primary);font-weight:700">Datenschutzerklärung</a>.</p>
-            <button type="button" class="btn btn-primary">Send message</button>
-          </form>
         </div>
       </div>
     </section>
