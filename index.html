@@ -2,17 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';">
+  <!-- When wiring up the contact form, update form-action and connect-src above -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LKGS Circle — Support for Cleft Lip & Palate Families</title>
   <meta name="description" content="A warm, supportive blog and resource website for parents of children with cleft lip and palate (LKGS), with stories, guidance, and links to trusted support." />
   <meta property="og:title" content="LKGS Circle — Support for Cleft Lip & Palate Families" />
   <meta property="og:description" content="Stories, guidance, and support for parents navigating cleft lip and palate journeys." />
   <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://api.fontshare.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <style>
+    /* Self-hosted fonts — no external CDN; no IP transmitted to third parties */
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('/fonts/satoshi/Satoshi-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('/fonts/satoshi/Satoshi-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('/fonts/satoshi/Satoshi-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Source Serif 4';
+      src: url('/fonts/source-serif-4/SourceSerif4-latin-ext.woff2') format('woff2');
+      font-weight: 400 700;
+      font-style: normal;
+      font-display: optional;
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Source Serif 4';
+      src: url('/fonts/source-serif-4/SourceSerif4-latin.woff2') format('woff2');
+      font-weight: 400 700;
+      font-style: normal;
+      font-display: optional;
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
   <style>
     :root, [data-theme="light"] {
       --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -115,6 +152,12 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
     }
+    .cookie-notice { position: fixed; bottom: var(--space-4); left: 50%; transform: translateX(-50%); z-index: 200; width: min(calc(100% - var(--space-8)), 680px); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); padding: var(--space-5) var(--space-6); }
+    .cookie-inner { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; justify-content: space-between; }
+    .cookie-inner p { font-size: var(--text-sm); max-width: none; flex: 1 1 280px; }
+    .cookie-actions { display: flex; gap: var(--space-3); align-items: center; flex-shrink: 0; }
+    .cookie-actions a { font-size: var(--text-sm); color: var(--color-primary); font-weight: 700; text-decoration: underline; }
+    .cookie-notice[hidden] { display: none; }
   </style>
 </head>
 <body>
@@ -283,6 +326,7 @@
             <label>Full name<input type="text" placeholder="Your name" aria-label="Full name"></label>
             <label>Email address<input type="email" placeholder="name@example.com" aria-label="Email address"></label>
             <label>Your message<textarea placeholder="Share your story, a question, or how you would like to help."></textarea></label>
+            <p style="font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-1)">This form is currently inactive — no data is transmitted. When activated, your name and email will be used only to respond and will not be shared with third parties. See our <a href="/datenschutz.html" style="color:var(--color-primary);font-weight:700">Datenschutzerklärung</a>.</p>
             <button type="button" class="btn btn-primary">Send message</button>
           </form>
         </div>
@@ -299,14 +343,35 @@
         </div>
         <p>This launch version is built as a clean, editable static site that can be published quickly and expanded over time.</p>
       </div>
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#stories">Stories</a>
-        <a href="#resources">Resources</a>
-        <a href="#support">Support</a>
+      <div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#stories">Stories</a>
+          <a href="#resources">Resources</a>
+          <a href="#support">Support</a>
+        </div>
+        <div class="footer-links" style="margin-top: var(--space-2)">
+          <a href="/impressum.html">Impressum</a>
+          <a href="/datenschutz.html">Datenschutzerkl&auml;rung</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <div id="cookie-notice" class="cookie-notice" role="alertdialog" aria-labelledby="cookie-notice-text" hidden>
+    <div class="cookie-inner">
+      <p id="cookie-notice-text">
+        <strong>No tracking on this site.</strong>
+        We use no analytics, no tracking cookies, and no third-party scripts.
+        Fonts are served from this server only.
+        <span lang="de">Keine Cookies, keine Tracking-Dienste.</span>
+      </p>
+      <div class="cookie-actions">
+        <a href="/datenschutz.html">Datenschutz</a>
+        <button id="cookie-dismiss" type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     (function () {
@@ -333,6 +398,24 @@
         navLinks.classList.remove('open');
         menuBtn.setAttribute('aria-expanded', 'false');
       }));
+
+      var cookieNotice = document.getElementById('cookie-notice');
+      var cookieDismiss = document.getElementById('cookie-dismiss');
+      if (cookieNotice) {
+        try {
+          if (!localStorage.getItem('cookie-notice-dismissed')) {
+            cookieNotice.removeAttribute('hidden');
+          }
+        } catch (e) {
+          cookieNotice.removeAttribute('hidden');
+        }
+        if (cookieDismiss) {
+          cookieDismiss.addEventListener('click', function () {
+            cookieNotice.setAttribute('hidden', '');
+            try { localStorage.setItem('cookie-notice-dismissed', '1'); } catch (e) {}
+          });
+        }
+      }
     }());
   </script>
 </body>
